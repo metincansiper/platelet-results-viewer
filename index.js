@@ -5,7 +5,7 @@ app.set('view engine', 'ejs');
 let server = require('http').createServer(app);
 let port = process.env.port || 9090;
 let folderUrl = 'http://localhost:' + port + '/results/';
-let newtUrl = 'http://localhost:9000';
+let newtUrl = 'http://35.192.108.199:9000';
 
 let sections = [
   {
