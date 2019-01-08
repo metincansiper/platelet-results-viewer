@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Platelet Results</title>
+  </head>
+  <body>
+    <p>This page provides resulting CausalPath networks for the MS phosphoproteomics dataset comparing activated platelets to their resting counterparts.</p>
+    <p>There are two main experimental settings: 1. feedback signaling inhibited, 2. feedback signaling allowed.</p>
+
+    <ul>
+      <% sections.forEach(function(section, sectionIndex){ %>
+        <h3><%= ( sectionIndex + 1 ) + '. ' + section.title %></h3>
+        <% section.results.forEach(function(res){ %>
+          <p><%= res.description %></p>
+          <iframe width="100%" height="100%" src=<%= newtUrl + '?URL=' + folderUrl + res.file %> seamless></iframe>
+        <% })%>
+      <% })%>
+    </ul>
+</body>
+</html>
