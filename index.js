@@ -3,7 +3,7 @@ let app = express();
 app.set('view engine', 'ejs');
 
 let server = require('http').createServer(app);
-let port = process.env.port || 8000;
+let port = process.env.port || 9090;
 let folderUrl = 'http://localhost:' + port + '/results/';
 let newtUrl = 'http://localhost:9000';
 
